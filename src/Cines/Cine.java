@@ -5,24 +5,25 @@
  */
 package Cines;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Admin
  */
 public class Cine {
     private String nombreCine;
-    private int numeroSala;
+    private ArrayList<Sala> listaSalas= new ArrayList();
 
-    public Cine(String nombreCine, int numeroSala) {
+    public Cine(String nombreCine) {
         this.nombreCine = nombreCine;
-        this.numeroSala = numeroSala;
     }
     public String getNombreCine() {
         return nombreCine;
     }
 
-    public int getNumeroSala() {
-        return numeroSala;
+    public int getCantidadSalas() {
+        return listaSalas.size();
     }
 
     

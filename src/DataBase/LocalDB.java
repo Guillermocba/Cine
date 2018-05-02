@@ -5,6 +5,7 @@
  */
 package DataBase;
 
+import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
 import java.util.ArrayList;
@@ -14,8 +15,9 @@ import java.util.ArrayList;
  * @author Yo
  */
 public class LocalDB extends BD {
-    private ArrayList<Funcion> listaFunciones; // esta reemplaza a la tabla funciones
-    private ArrayList<Pelicula> listaPeliculas; // esta reemplaza a la tabla Peliculas
+    private ArrayList<Funcion> listaFunciones= new ArrayList(); // esta reemplaza a la tabla funciones
+    private ArrayList<Pelicula> listaPeliculas= new ArrayList(); // esta reemplaza a la tabla Peliculas
+    private ArrayList<Cine> listaCine= new ArrayList(); // esta reemplaza a la tabla Cines
     
     @Override
     public ArrayList<Funcion> getListaFunciones() {
