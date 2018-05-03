@@ -25,6 +25,11 @@ public class Cine {
     public int getCantidadSalas() {
         return listaSalas.size();
     }
-
+    public void addSala(Sala sala){
+        listaSalas.add(sala);
+    }
+    public ArrayList<Sala> getListaSalas(){
+        return listaSalas;
+    }
     
 }

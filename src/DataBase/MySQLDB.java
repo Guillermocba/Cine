@@ -5,6 +5,7 @@
  */
 package DataBase;
 
+import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
 import java.util.ArrayList;
@@ -27,6 +28,11 @@ public class MySQLDB extends BD {
 
     @Override
     public void addPelicula(String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<Cine> getListaCines() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

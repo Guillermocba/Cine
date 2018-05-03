@@ -5,6 +5,11 @@
  */
 package Inicio;
 
+import Cines.AdmCines;
+import Cines.Cine;
+import DataBase.BD;
+import DataBase.LocalDB;
+
 /**
  *
  * @author Admin
@@ -28,6 +33,20 @@ public class Main {
     */
     public static void main(String[] args) {
         System.out.println("Programa funciona");
+        AdmCines admCines= new AdmCines();
+        Cine cine1= admCines.addCine("hoyts");
+        admCines.addSala(cine1, 100);
+        admCines.addSala(cine1, 10);
+        
+        BD db = new LocalDB();
+        System.out.println(db.getListaCines().get(0).getNombreCine());
+        
+        System.out.println(db.getListaCines().get(0).getListaSalas().get(0).getNumeroSala());
+        System.out.println(db.getListaCines().get(0).getListaSalas().get(0).getCantButaca());
+        
+        System.out.println(db.getListaCines().get(0).getListaSalas().get(1).getNumeroSala());
+        System.out.println(db.getListaCines().get(0).getListaSalas().get(1).getCantButaca());
+        
     }
     
 }

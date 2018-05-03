@@ -5,6 +5,7 @@
  */
 package DataBase;
 
+import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
 import java.util.ArrayList;
@@ -16,5 +17,6 @@ import java.util.ArrayList;
 public abstract class BD {
     abstract public ArrayList<Funcion>getListaFunciones();
     abstract public ArrayList<Pelicula>getListaPelicula();
+    abstract public ArrayList<Cine>getListaCines();
     abstract public void addPelicula(String Nombre);
 }
