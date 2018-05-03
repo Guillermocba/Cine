@@ -28,6 +28,7 @@ public class Main {
                 crear sala >1
     3- Vender Entrada
     4- Imprimir entrada
+    5-Imprimir Arquitectura cines
     
     
     */
