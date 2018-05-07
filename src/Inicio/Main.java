@@ -21,6 +21,7 @@ public class Main {
      */
     
     /*
+    0- Hacer un menu de usuario.
     1- Agregar 3 Peliculas 
     2- Imprimir Programacion 
         crear una Funcion para la pelicula (horario, cine, sala,...)
@@ -28,12 +29,13 @@ public class Main {
                 crear sala >1
     3- Vender Entrada
     4- Imprimir entrada
-    5-Imprimir Arquitectura cines
+    5- Imprimir Arquitectura cines
     
     
     */
     public static void main(String[] args) {
         System.out.println("Programa funciona");
+        /*
         AdmCines admCines= new AdmCines();
         Cine cine1= admCines.addCine("hoyts");
         admCines.addSala(cine1, 100);
@@ -47,7 +49,11 @@ public class Main {
         
         System.out.println(db.getListaCines().get(0).getListaSalas().get(1).getNumeroSala());
         System.out.println(db.getListaCines().get(0).getListaSalas().get(1).getCantButaca());
-        
+        */
+        CommandCLI consola =new CommandCLI();
+        consola.runMenu();
+        BD db = new LocalDB();
+        System.out.println("Cine de DB:" + db.getListaCines().get(0).getNombreCine());
     }
     
 }
