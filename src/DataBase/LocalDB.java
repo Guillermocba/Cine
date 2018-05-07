@@ -5,6 +5,7 @@
  */
 package DataBase;
 
+import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
 import java.util.ArrayList;
@@ -14,22 +15,28 @@ import java.util.ArrayList;
  * @author Yo
  */
 public class LocalDB extends BD {
-    private ArrayList<Funcion> listaFunciones; // esta reemplaza a la tabla funciones
-    private ArrayList<Pelicula> listaPeliculas; // esta reemplaza a la tabla Peliculas
+    private static ArrayList<Funcion> listaFunciones= new ArrayList(); // esta reemplaza a la tabla funciones
+    private static ArrayList<Pelicula> listaPeliculas= new ArrayList(); // esta reemplaza a la tabla Peliculas
+    private static ArrayList<Cine> listaCine= new ArrayList(); // esta reemplaza a la tabla Cines
     
     @Override
     public ArrayList<Funcion> getListaFunciones() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return listaFunciones;
     }
 
     @Override
     public ArrayList<Pelicula> getListaPelicula() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return listaPeliculas;
     }
 
     @Override
     public void addPelicula(String nombre) {
         Pelicula pelicula = new Pelicula (nombre);
+    }
+
+    @Override
+    public ArrayList<Cine> getListaCines() {
+        return listaCine;
     }
 
       

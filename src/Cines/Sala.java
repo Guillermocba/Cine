@@ -17,6 +17,20 @@ public class Sala {
         this.numeroSala = numeroSala;
         this.cantButaca = cantButaca;
     }
+
+    /**
+     * @return the numeroSala
+     */
+    public int getNumeroSala() {
+        return numeroSala;
+    }
+
+    /**
+     * @return the cantButaca
+     */
+    public int getCantButaca() {
+        return cantButaca;
+    }
     
     
     
