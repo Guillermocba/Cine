@@ -8,6 +8,7 @@ package DataBase;
 import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
+import Cines.Sala;
 import java.util.ArrayList;
 
 /**
