@@ -54,7 +54,7 @@ public class Main {
         consola.runMenu();
         BD db = new LocalDB();
         System.out.println("Cine de DB:" + db.getListaCines().get(0).getNombreCine());
-        System.out.println("Sala de DB:" + db.getListaCines().get(0).getListaSalas());
+        System.out.println("Sala de DB:" + db.getListaCines().get(0).getListaSalas().get(0).getCantButaca());
     }
     
 }
