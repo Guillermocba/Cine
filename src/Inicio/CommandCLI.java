@@ -46,9 +46,7 @@ public class CommandCLI {
                 agregarSala();
                 break;
             case 3:
-                for(int i=0;i<3;i++){
-                    agregarPelicula();
-                }
+                agregarPelicula();
                 break;
             case 4:
                 break;
