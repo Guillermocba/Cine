@@ -6,6 +6,7 @@
 package Inicio;
 import Cines.AdmCines;
 import Cines.Cine;
+import Cines.Pelicula;
 import Cines.Sala;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class CommandCLI {
     private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     private AdmCines admCines= new AdmCines();
     private Cine cine;
+    private Pelicula pelicula;
     public void printMenu(){
         System.out.print("Menu\n\n"
                 + "1-Agregar Cine\n"
@@ -44,6 +46,7 @@ public class CommandCLI {
                 agregarSala();
                 break;
             case 3:
+                agregarPelicula();
                 break;
             case 4:
                 break;
@@ -82,5 +85,11 @@ public class CommandCLI {
         System.out.println("Ingrese la cantidad de butacas: ");
         int cant=scanner.nextInt();
         admCines.addSala(cine, cant); 
+    }
+    
+    private void agregarPelicula(){
+        System.out.println("Ingrese nombre de la película: ");
+        String nombre=readStringCLI();
+        pelicula=admCines.addPelicula(nombre);
     }
 }

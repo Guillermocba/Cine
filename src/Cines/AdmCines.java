@@ -8,6 +8,7 @@ package Cines;
 import DataBase.BD;
 import DataBase.LocalDB;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -15,10 +16,12 @@ import java.util.ArrayList;
  */
 public class AdmCines {
     private ArrayList<Cine> listaCine;
+    private ArrayList<Pelicula> listaPeliculas;
     
     public AdmCines(){
         BD db= new LocalDB();
         listaCine= db.getListaCines();
+        listaPeliculas=db.getListaPelicula();
         
     }
     
@@ -32,5 +35,10 @@ public class AdmCines {
         Sala sala=new Sala(numSalas+1,cantButaca);
         cine.addSala(sala);
         return sala;
+    }
+    public Pelicula addPelicula(String nombre){
+        Pelicula pelicula =new Pelicula(nombre);
+        listaPeliculas.add(pelicula);
+        return pelicula;
     }
 }
