@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Admin
  */
 public class Pelicula {
-
+    private String nombre;
     private String calificacion;
     private String genero;
     private float duracion;
@@ -20,8 +20,7 @@ public class Pelicula {
     private String actores;
     private String idionma;
     private boolean subtitulos;
-    private String nombre;
-
+    
     public Pelicula(String nombre) {
         this.nombre = nombre;
     }
@@ -34,7 +33,7 @@ public class Pelicula {
         this.actores = actores;
         this.idionma = idionma;
         this.subtitulos = subtitulos;
-        this.nombre = nombre;
+        this.nombre = nombrePelicula;
     }
     
        
