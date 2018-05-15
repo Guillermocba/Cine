@@ -35,6 +35,13 @@ public class Pelicula {
         this.subtitulos = subtitulos;
         this.nombre = nombrePelicula;
     }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
     
        
 }

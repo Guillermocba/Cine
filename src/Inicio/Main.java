@@ -21,15 +21,16 @@ public class Main {
      */
     
     /*
-    0- Hacer un menu de usuario.
-    1- Agregar 3 Peliculas 
+    0- Hacer un menu de usuario. OK
+    1- Agregar 3 Peliculas OK
     2- Imprimir Programacion 
         crear una Funcion para la pelicula (horario, cine, sala,...)
-            crear cines.>1
-                crear sala >1
+            crear cines.>1 OK
+                crear sala >1 OK
+            crear peliculas OK    
     3- Vender Entrada
     4- Imprimir entrada
-    5- Imprimir Arquitectura cines
+    5- Imprimir Arquitectura cines. OK
     
     
     */
@@ -53,8 +54,11 @@ public class Main {
         CommandCLI consola =new CommandCLI();
         consola.runMenu();
         BD db = new LocalDB();
-        System.out.println("Cine de DB:" + db.getListaCines().get(0).getNombreCine());
-        System.out.println("Sala de DB:" + db.getListaCines().get(0).getListaSalas().get(0).getCantButaca());
+        //System.out.println("Cine de DB: " + db.getListaCines().get(0).getNombreCine());
+        //System.out.println("Sala de DB: " + db.getListaCines().get(0).getListaSalas().get(0).getCantButaca());
+        //System.out.println("Pelicula 1: "+ db.getListaPelicula().get(0).getNombre());
+        //System.out.println("Pelicula 2: "+ db.getListaPelicula().get(1).getNombre());
+        //System.out.println("Pelicula 3: "+ db.getListaPelicula().get(2).getNombre());
     }
     
 }
