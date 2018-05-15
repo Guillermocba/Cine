@@ -30,11 +30,6 @@ public class LocalDB extends BD {
     }
 
     @Override
-    public void addPelicula(String nombre) {
-        Pelicula pelicula = new Pelicula (nombre);
-    }
-
-    @Override
     public ArrayList<Cine> getListaCines() {
         return listaCine;
     }

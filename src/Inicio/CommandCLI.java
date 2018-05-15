@@ -5,6 +5,7 @@
  */
 package Inicio;
 import Cines.AdmCines;
+import Cines.AdmDeFunciones;
 import Cines.Cine;
 import Cines.Pelicula;
 import Cines.Sala;
@@ -25,7 +26,8 @@ public class CommandCLI {
     private Scanner scanner = new Scanner(System.in);
     private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     private AdmCines admCines= new AdmCines();
-    private Cine cine;
+    private AdmDeFunciones admFun= new AdmDeFunciones();
+
     private Pelicula pelicula;
     public void printMenu(){
         System.out.print("Menu\n\n"
@@ -33,11 +35,13 @@ public class CommandCLI {
                 + "2-Agregar Sala\n"
                 + "3-Agregar Pelicula\n"
                 + "4-Imprimir Programacion\n"
-                + "5-Salir\n"
+                + "5-Imprimir Cines y Salas\n"
+                + "6-Salir\n"
                 + "Ingrese opcion: ");
     }
-    private void runCommand(int option){
-        
+    private boolean runCommand(int option){
+       //TO-DO: cambiar cases por enum;
+        boolean salir=false;
         switch (option){
             case 1:
                 agregarCine();
@@ -51,17 +55,23 @@ public class CommandCLI {
             case 4:
                 break;
             case 5:
-                break;    
+                printSalasCines();
+                break;
+            case 6:
+                salir=true;
+                break;
             default:
                 break;
         }
+        return salir;
     }
     public void runMenu(){
         int option =0;
+        boolean cmd;
         do {printMenu();
         option = scanner.nextInt();
-        runCommand(option);
-        }while (option !=5);
+        cmd = runCommand(option);
+        }while (!cmd);
         
     }
     
@@ -78,10 +88,20 @@ public class CommandCLI {
     private void agregarCine(){
         System.out.print("Nombre de Cine: ");
         String nombre =readStringCLI();
-        cine= admCines.addCine(nombre);
+        admCines.addCine(nombre);
      }
     
     private void agregarSala(){
+        Cine cine;
+        System.out.print("Nombre de Cine: ");
+        String nombre =readStringCLI();
+        
+        cine=admCines.buscarCine(nombre);
+        if(cine == null){
+            System.out.println("No existe Cine");
+            return;
+        } 
+        
         System.out.println("Ingrese la cantidad de butacas: ");
         int cant=scanner.nextInt();
         admCines.addSala(cine, cant); 
@@ -90,6 +110,10 @@ public class CommandCLI {
     private void agregarPelicula(){
         System.out.println("Ingrese nombre de la película: ");
         String nombre=readStringCLI();
-        pelicula=admCines.addPelicula(nombre);
+        pelicula=admFun.addPelicula(nombre);
+    }
+
+    private void printSalasCines() {
+    admCines.printSalasCines();
     }
 }

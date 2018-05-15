@@ -16,12 +16,10 @@ import java.util.Date;
  */
 public class AdmCines {
     private ArrayList<Cine> listaCine;
-    private ArrayList<Pelicula> listaPeliculas;
     
     public AdmCines(){
         BD db= new LocalDB();
         listaCine= db.getListaCines();
-        listaPeliculas=db.getListaPelicula();
         
     }
     
@@ -36,9 +34,23 @@ public class AdmCines {
         cine.addSala(sala);
         return sala;
     }
-    public Pelicula addPelicula(String nombre){
-        Pelicula pelicula =new Pelicula(nombre);
-        listaPeliculas.add(pelicula);
-        return pelicula;
+
+    public void printSalasCines() {
+        for(int i=0;i<listaCine.size();i++){
+            System.out.println("Cine "+(i+1)+": "+ listaCine.get(i).getNombreCine());
+            listaCine.get(i).printSalas();
+        }
     }
+
+    public Cine buscarCine(String nombre) {
+        Cine cine = null;
+        for(int i=0;i<listaCine.size();i++){
+            if(nombre.equals(listaCine.get(i).getNombreCine())){
+                cine=listaCine.get(i);
+                break;
+            }
+        }
+        return cine;
+    }
+
 }
