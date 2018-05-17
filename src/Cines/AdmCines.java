@@ -42,15 +42,5 @@ public class AdmCines {
         }
     }
 
-    public Cine buscarCine(String nombre) {
-        Cine cine = null;
-        for(int i=0;i<listaCine.size();i++){
-            if(nombre.equals(listaCine.get(i).getNombreCine())){
-                cine=listaCine.get(i);
-                break;
-            }
-        }
-        return cine;
-    }
-
+   
 }

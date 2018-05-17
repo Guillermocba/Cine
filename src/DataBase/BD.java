@@ -19,4 +19,7 @@ public abstract class BD {
     abstract public ArrayList<Funcion>getListaFunciones();
     abstract public ArrayList<Pelicula>getListaPelicula();
     abstract public ArrayList<Cine>getListaCines();
+    abstract public Cine validarCine();
+    abstract public Cine buscarCine(String nombre);
+    abstract public Pelicula validarPelicula();
 }

@@ -7,6 +7,7 @@ package Inicio;
 
 import Cines.AdmCines;
 import Cines.Cine;
+import Cines.Utils;
 import DataBase.BD;
 import DataBase.LocalDB;
 
@@ -53,7 +54,8 @@ public class Main {
         */
         CommandCLI consola =new CommandCLI();
         consola.runMenu();
-        BD db = new LocalDB();
+
+        //BD db = new LocalDB();
         //System.out.println("Cine de DB: " + db.getListaCines().get(0).getNombreCine());
         //System.out.println("Sala de DB: " + db.getListaCines().get(0).getListaSalas().get(0).getCantButaca());
         //System.out.println("Pelicula 1: "+ db.getListaPelicula().get(0).getNombre());

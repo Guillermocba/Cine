@@ -31,7 +31,9 @@ public class Cine {
     public ArrayList<Sala> getListaSalas(){
         return listaSalas;
     }
-
+    public boolean existeSala(int i){
+        return i<=listaSalas.size();
+    }
     void printSalas() {
         for(int i=0;i<listaSalas.size();i++){
             System.out.println(String.format("Sala %d: %d butacas",listaSalas.get(i).getNumeroSala(),listaSalas.get(i).getCantButaca()));                 

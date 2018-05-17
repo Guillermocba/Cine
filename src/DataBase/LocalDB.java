@@ -8,6 +8,7 @@ package DataBase;
 import Cines.Cine;
 import Cines.Funcion;
 import Cines.Pelicula;
+import Cines.Utils;
 import java.util.ArrayList;
 
 /**
@@ -34,6 +35,40 @@ public class LocalDB extends BD {
         return listaCine;
     }
 
-      
-    
+     public Cine buscarCine(String nombre) {
+        Cine cine = null;
+        for(int i=0;i<listaCine.size();i++){
+            if(nombre.equals(listaCine.get(i).getNombreCine())){
+                cine=listaCine.get(i);
+                break;
+            }
+        }
+        return cine;
+    }
+    public Cine validarCine() {
+        Cine cine;
+        System.out.print("Nombre de Cine: ");
+        String nombre =Utils.readStringCLI();
+        cine=buscarCine(nombre);
+        return cine;
+    }  
+        public Pelicula validarPelicula() {
+        Pelicula pelicula;
+        System.out.print("Nombre de Pelicula: ");
+        String nombre =Utils.readStringCLI();
+        pelicula=buscarPelicula(nombre);
+        return pelicula;
+    }  
+
+    private Pelicula buscarPelicula(String nombre) {
+        Pelicula pelicula = null;
+        for(int i=0;i<listaPeliculas.size();i++){
+            if(nombre.equals(listaPeliculas.get(i).getNombre())){
+                pelicula=listaPeliculas.get(i);
+                break;
+            }
+        }
+        return pelicula;
+    }
+
 }

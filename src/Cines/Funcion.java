@@ -5,6 +5,8 @@
  */
 package Cines;
 
+import java.time.Year;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -12,8 +14,8 @@ import java.util.Date;
  * @author Admin
  */
 public class Funcion {
-    private Date fechaFuncion;
-    private Date horaFuncion;
+    private Calendar fechaFuncion;
+    private Calendar horaFuncion;
     private int numeroSala;
     private String nombreCine;
     private String nombrePelicula;
@@ -23,13 +25,14 @@ public class Funcion {
         return null;
     }
 
-    public Funcion(Date fechaFuncion, Date horaFuncion, int numeroSala, String nombreCine, String nombrePelicula, boolean habilitar) {
+    public Funcion(Calendar fechaFuncion, Calendar horaFuncion, int numeroSala, String nombreCine, String nombrePelicula, boolean habilitar) {
         this.fechaFuncion = fechaFuncion;
         this.horaFuncion = horaFuncion;
         this.numeroSala = numeroSala;
         this.nombreCine = nombreCine;
         this.nombrePelicula = nombrePelicula;
         this.habilitar = habilitar;
+
     }
     
     

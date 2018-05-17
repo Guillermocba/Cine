@@ -5,14 +5,21 @@
  */
 package Cines;
 
+import DataBase.BD;
+import DataBase.LocalDB;
+import java.util.ArrayList;
+
 /**
  *
  * @author Admin
  */
 public class Programacion {
     
+    private ArrayList<Funcion> listaFunciones;
+    
     public void printProgramacion(){
-      
+      BD db= new LocalDB();
+      listaFunciones=db.getListaFunciones();
     }
     
 }
